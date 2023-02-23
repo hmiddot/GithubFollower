@@ -39,6 +39,7 @@ def follow():
                 print(z + f"Failed to check if you are following " + follower['login'] + ".")
             i += 1
             if i == 101:
+                i -= 100
                 j += 1
                 follow()
     else:
