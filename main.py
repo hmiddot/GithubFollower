@@ -5,7 +5,7 @@ i = 1
 print("Welcome to GithubFollower V.0.1")
 print("To Start Following Create a Github access-token")
 username = "hmddrz"
-access_token = "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"
+access_token = "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"
 user_to_follow_followers = "facebook"
 
 
