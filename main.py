@@ -7,7 +7,7 @@ def main():
     print("Welcome to GithubFollower V.0.1")
     print("To Start Following Create a Github access-token")
     username = input("Type Your Own Username : ")
-    access_token = input("Type Your Own PAT : ")
+    access_token = input("Type Your Own Fine-Grained Personal Access Token : ")
     user_to_follow_followers = input("Type id of User to Follow : ")
 
     def follow():
