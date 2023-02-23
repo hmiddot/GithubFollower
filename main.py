@@ -4,9 +4,9 @@ j = 1
 i = 1
 print("Welcome to GithubFollower V.0.1")
 print("To Start Following Create a Github access-token")
-username = input("Type Your Own Username : ")
-access_token = input("Type Your Own Fine-Grained Personal Access Token : ")
-user_to_follow_followers = input("Type id of User to Follow : ")
+username = "hmddrz"
+access_token = "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"
+user_to_follow_followers = "Meta"
 
 
 def follow():
