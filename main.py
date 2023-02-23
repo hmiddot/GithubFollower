@@ -47,3 +47,4 @@ def follow():
 
 follow()
 print('Following Ended Successfully !')
+print('Bye !')
