@@ -1,23 +1,23 @@
-name: Python package
+name: On Push Run
 
-on: [push]
+on: push
+
+env:
+  DEVOPS_DIR: devops
 
 jobs:
-  build:
-
+  hello-world:
+    name: Hello world
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python: ["3.8", "3.9", "3.10"]
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python }}
-      - name: Install tox and any other packages
-        run: pip install tox
-      - name: Run tox
-        # Run tox using the version of Python in `PATH`
-        run: tox -e py
+    - name: Check-out devops repository
+      uses: actions/checkout@v2
+      with:
+        repository: jcdan3/devops
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: ${{ env.DEVOPS_DIR }}
+
+    - name: Hello World
+      run: python ${{ env.DEVOPS_DIR }}/main.py
+      shell: sh
+
